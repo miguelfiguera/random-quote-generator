@@ -13,7 +13,7 @@ export default function QuoteBox() {
 
   async function Quote (){
     try {
-      const request = await fetch(" http://api.quotable.io/quotes/random", {
+      const request = await fetch(" https://api.quotable.io/quotes/random", {
         mode: "cors",
       });
       const parsed = await request.json();
