@@ -59,7 +59,9 @@ console.log(result)
 return result
 }
 
-const classes= quoteObject.content.length < 150 ? "text-center text-light fs-4 pt-5 pb-4" : "text-center text-light fs-5 pt-5 pb-4"
+const toMessure=`${quoteObject.content}`
+
+const classes= toMessure.length < 150 ? "text-center text-light fs-4 pt-5 pb-4" : "text-center text-light fs-5 pt-5 pb-4"
 
 const linkString=link()
 
@@ -74,7 +76,7 @@ const linkString=link()
       </h4>
       <p id="author" className="text-end text-light mb-5 me-5 pe-5" >{quoteObject.author}</p>
       <div className="modal-footer">
-        <a href={linkString} id="tweet-quote" className="color-primary">
+        <a href={linkString} id="tweet-quote" className="color-primary ms-5">
           <i className="fa-brands fa-square-twitter fa-2xl"></i>
         </a>
         <button id="new-quote" className="btn btn-primary mx-auto " onClick={handleNewQuote}>
