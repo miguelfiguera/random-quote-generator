@@ -59,6 +59,8 @@ console.log(result)
 return result
 }
 
+const classes= quoteObject.content.length < 150 ? "text-center text-light fs-4 pt-5 pb-4" : "text-center text-light fs-5 pt-5 pb-4"
+
 const linkString=link()
 
   return (
@@ -67,7 +69,7 @@ const linkString=link()
       className="container mx-auto border-dark rounded-3 position-absolute top-50 start-50 translate-middle"
       style={thisStyles}
     >
-      <h4 id="text" className="text-center text-light fs-3 pt-5 pb-4">
+      <h4 id="text" className={classes}>
         <em>"{quoteObject.content}"</em>
       </h4>
       <p id="author" className="text-end text-light mb-5 me-5 pe-5" >{quoteObject.author}</p>
